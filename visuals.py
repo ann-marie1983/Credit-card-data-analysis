@@ -41,7 +41,5 @@ plt.show()
 sns.relplot(x="Total_Trans_Ct", y="Avg_Open_To_Buy", data=df, kind="line", hue="Attrition_Flag")
 plt.show()
 ## Review of client relationship and contacts
-sns.relplot(x="Total_Relationship_Count", y="Contacts_Count_12_mon",data=df, kind="line",ci="sd", hue="Attrition_Flag")
-plt.show()
 sns.boxplot(x = 'Attrition_Flag', y = 'Months_on_book', data = df, hue='Contacts_Count_12_mon', sym="")
 plt.show()
