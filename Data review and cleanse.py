@@ -1,5 +1,4 @@
 # import all required libraries
-import inline as inline
 import pandas as pd
 import numpy as np
 # import CSV file credit card customer data
