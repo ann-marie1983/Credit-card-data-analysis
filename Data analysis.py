@@ -53,6 +53,8 @@ print( Total_relationship_B / 8500 )
 # Look at numerical data that we can analyse using min, max, mean, and median and see if a pattern emerges
 Client_review_inactive = data.groupby("Attrition_Flag")["Months_Inactive_12_mon"].agg([np.min, np.max, np.mean, np.median])
 print(Client_review_inactive)
+Client_review_Age = data.groupby("Attrition_Flag")["Customer_Age"].agg([np.min, np.max, np.mean, np.median])
+print(Client_review_Age)
 Client_review_Contacts = data.groupby("Attrition_Flag")["Contacts_Count_12_mon"].agg([np.min, np.max, np.mean, np.median])
 print(Client_review_Contacts)
 Client_review_Credit_Limit = data.groupby("Attrition_Flag")["Credit_Limit"].agg([np.min, np.max, np.mean, np.median])
@@ -72,4 +74,3 @@ print(data.groupby('Card_Category')['Attrition_Flag'].value_counts())
 print(data.groupby('Income_Category')['Attrition_Flag'].value_counts())
 Dep_Relationships= data.groupby("Marital_Status")["Dependent_count"].agg([np.min, np.max, np.mean, np.median])
 print(Dep_Relationships)
-# Loop while true
